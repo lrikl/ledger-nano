@@ -115,7 +115,7 @@
 }
 
 .rz-a-p {
-    width: clamp(280px, 56vw, 720px);
+    width: clamp(240px, 56vw, 720px);
 }
 
 .rz-title {
@@ -469,6 +469,10 @@
     .rz-wrap-video {
         width: 100%;
         margin: 0 auto;
+    }
+
+    .rz-accordion-item-trigger:hover {
+        background: none;
     }
     
     
