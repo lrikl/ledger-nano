@@ -333,7 +333,7 @@
     font-size: 16px;
     font-weight: 700;
     position: absolute;
-    left: 0;
+    left: 4px;
     top: 3px;
 }
 
@@ -413,7 +413,7 @@
 }
 
 .rz-accordion-item-input:checked + .rz-accordion-item-trigger+ .rz-accordion-item-content {
-    max-height: 400px;
+    max-height: 600px;
 }
 
 /* accordion end */
@@ -477,4 +477,10 @@
     .rz-accordion-item-trigger:hover {
         background: #232323;
     }
+
+    .rz-after-point::after {
+        top: 1px;
+        left: 0;
+    }
+       
 }
