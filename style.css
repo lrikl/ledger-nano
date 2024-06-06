@@ -385,6 +385,8 @@
     cursor: pointer;
     transition: ease-in-out 0.3s;
     position: relative;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .rz-accordion-item-trigger:hover {
@@ -473,7 +475,5 @@
 
     .rz-accordion-item-trigger:hover {
         background: none;
-    }
-    
-    
+    } 
 }
