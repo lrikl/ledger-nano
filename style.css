@@ -368,51 +368,52 @@
 .rz-accordion{
     gap: var(--rz-clamp16-24);
     width: 80%;
+    overflow: hidden;
 }
 
 .rz-accordion-item-input {
-    opacity: 0;
-    position: absolute;
+    display: none;
 }
 
 .rz-accordion-item-trigger {
     padding: 8px 16px;
+    margin-bottom: 8px;
+
     border: 2px solid var(--rz-white-color);
     border-radius: 20px;
+
     background: #232323;
     display: block;
-    margin-bottom: 8px;
+
     cursor: pointer;
     transition: ease-in-out 0.3s;
-    position: relative;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     -webkit-tap-highlight-color: transparent;
 }
 
-.rz-accordion-item-trigger:hover {
-    background: rgba(255, 255, 255, 0.17);
-}
-
 .rz-accordion-item-content {
-    padding: 16px;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.17);
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    opacity: 0;
-    transition: opacity 1s ease;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.rz-accordion-item-content .rz-accordion-p {
+    padding: 16px;
 }
 
 .rz-accordion-item-input:checked~.rz-accordion-item-trigger {
     background: rgba(255, 255, 255, 0.17);
 }
 
-.rz-accordion-item-input:checked~.rz-accordion-item-content {
-    position: relative;
-    opacity: 1;
-    z-index: 1;
+.rz-accordion-item-trigger:hover {
+    background: rgba(255, 255, 255, 0.17);
+}
 
+.rz-accordion-item-input:checked + .rz-accordion-item-trigger+ .rz-accordion-item-content {
+    max-height: 400px;
 }
 
 /* accordion end */
@@ -475,5 +476,5 @@
 
     .rz-accordion-item-trigger:hover {
         background: #232323;
-    } 
+    }
 }
