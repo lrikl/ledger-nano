@@ -27,24 +27,28 @@
     }
 
 
-.rz-container-rich * {
+body * {
     box-sizing: border-box;
 }
 
-.rz-container-rich {
-    color-scheme: only light;
-    
-    max-width: 1536px;
-    overflow: hidden;
-    display: block;
-    margin: 0 auto;
-    
+body {
+    background: var(--rz-black-color);
     font-size: var(--rz-clamp16-24);
     line-height: 1.2;
     font-family: Rozetka, Arial, Helvetica, FreeSans, "Liberation Sans", "Nimbus Sans L", sans-serif;
     
     color: var(--rz-white-color);
     background: var(--rz-black-color);
+    color-scheme: only light;
+}
+
+.rz-container-rich {
+    
+    max-width: 1536px;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    
     }
 
 .rz-margin-b-8 {
